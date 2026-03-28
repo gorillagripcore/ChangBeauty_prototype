@@ -1468,6 +1468,8 @@ address { font-style: normal; }
 }
 
 @media (max-width: 480px) {
+  .hero__eyebrow { display: none; }
+  .hero__stars { display: flex; width: 100%; justify-content: center; box-sizing: border-box; }
   .hero__cta { flex-direction: column; align-items: stretch; }
   .btn--hero { justify-content: center; }
   .btn--ghost { text-align: center; justify-content: center; }
@@ -1479,6 +1481,35 @@ address { font-style: normal; }
   .staff__grid { grid-template-columns: 1fr; max-width: 320px; }
 
   .btn--xl { font-size: 1.1rem; padding: 0.9rem 2rem; }
+}
+
+/* Remove all hover effects on touch devices */
+@media (hover: none) {
+  .btn:hover { transform: none; }
+  .btn--primary:hover { box-shadow: none; }
+  .btn--hero:hover { transform: none; box-shadow: none; }
+  .btn--cta-white:hover { transform: none; box-shadow: none; }
+  .btn--ghost:hover { transform: none; background: transparent; }
+  .btn--outline:hover { transform: none; }
+  .btn--nav:hover { background: transparent; }
+  .nav__logo:hover { color: inherit; }
+  .nav__link:hover { color: inherit; }
+  .badge-card:hover { transform: none; box-shadow: none; }
+  .service-card:hover { transform: none; box-shadow: none; }
+  .service-card:hover::before { opacity: 0; }
+  .price-row:hover { background: transparent; }
+  .staff-card:hover { transform: none; box-shadow: none; }
+  .gallery__item:hover img { transform: none; }
+  .gallery__item:hover .gallery__overlay { opacity: 0; }
+  .gallery__item:hover .gallery__overlay span { transform: none; }
+  .hours-table tr:hover { background: transparent; }
+  .policy__item:hover { transform: none; box-shadow: none; }
+  .faq__item:hover { border-color: var(--border); }
+  .faq__question:hover { background: transparent; }
+  .footer__links a:hover,
+  .footer__contact a:hover { color: inherit; }
+  .footer__bottom a:hover { color: inherit; }
+  .floating-cta__btn:hover { transform: none; box-shadow: none; }
 }
 
 /* ===== FOCUS STYLES (accessibility) ===== */
